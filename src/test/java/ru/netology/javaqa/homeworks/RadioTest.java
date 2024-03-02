@@ -6,6 +6,7 @@ public class RadioTest {
 
     Radio radio = new Radio(30);
 
+
     @Test
     public void minBoundaryStationValuesP1() {
 
