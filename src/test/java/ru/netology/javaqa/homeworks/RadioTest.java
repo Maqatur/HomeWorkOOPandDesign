@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 public class RadioTest {
 
-    Radio radio = new Radio(30);
 
+    Radio radio = new Radio(30);
 
     @Test
     public void minBoundaryStationValuesP1() {
@@ -239,6 +239,7 @@ public class RadioTest {
     @Test
     public void minBoundaryStationValuesP1DefaultQuality() {
         Radio radio = new Radio();
+        radio.setNumberOfStations(10);
         radio.setCurrentStation(-1);
         int expected = 9;
         int actual = radio.getCurrentStation();
@@ -250,6 +251,7 @@ public class RadioTest {
     @Test
     public void maxBoundaryStationValuesP3DefaultQuality() {
         Radio radio = new Radio();
+        radio.setNumberOfStations(10);
         radio.setCurrentStation(10);
 
         int expected = 0;
@@ -261,6 +263,7 @@ public class RadioTest {
     @Test
     public void nextStationAfterLastP2DefaultQuality() {
         Radio radio = new Radio();
+        radio.setNumberOfStations(10);
         radio.setCurrentStation(9);
         radio.nextStation();
 
@@ -273,6 +276,7 @@ public class RadioTest {
     @Test
     public void prevStationBeforeFirstP2DefaultQuality() {
         Radio radio = new Radio();
+        radio.setNumberOfStations(10);
         radio.setCurrentStation(0);
         radio.prevStation();
 
